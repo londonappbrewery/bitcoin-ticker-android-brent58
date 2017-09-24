@@ -32,31 +32,123 @@
         android:layout_centerHorizontal="true"/>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/priceLabel"
-        android:gravity="center_vertical|center_horizontal">
+        android:layout_marginTop="31dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelDayAvgTV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/label_day_avg"
+                android:textAlignment="viewEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large.Inverse"/>
+
+            <TextView
+                android:id="@+id/dayAvgTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.52"
+                android:gravity="end"
+                android:text="@string/zero_value"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelDayOpenTV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/label_day_open"
+                android:textAlignment="viewEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large.Inverse"/>
+
+            <TextView
+                android:id="@+id/dayOpenTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="0.52"
+                android:text="@string/zero_value"
+                android:textAlignment="viewEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelMoveTV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="0.0"
+                android:text="@string/label_move"
+                android:textAlignment="viewEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large.Inverse"/>
+
+            <TextView
+                android:id="@+id/moveTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.52"
+                android:gravity="end"
+                android:text="@string/zero_value"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/base"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:id="@+id/textView"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:text="@string/base"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
 
         <Spinner
+            android:id="@+id/currency_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/currency_spinner"
+            android:dropDownSelector="@color/fontColour"
             android:gravity="center_horizontal"
             android:spinnerMode="dropdown"
-            android:dropDownSelector="@color/fontColour"
             />
 
 
